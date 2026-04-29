@@ -1,4 +1,4 @@
-Running the Main Capstone Project
+## Running the Main Capstone Project
 
 1. Clone the repository
    git clone https://github.com/RADshahmat/phase01_static-equipment-inventory.git
@@ -27,7 +27,7 @@ http://localhost:5173
 
 Each Success-checks is fully independent.
 
-React Auth App (Phase 1.2 Success Check)
+## React Auth App (Phase 1.2 Success Check)
 cd succcess_checks_phase01/p1.2_React-auth-app
 npm install
 npm run dev
@@ -35,7 +35,8 @@ npm run dev
 Runs on:
 
 http://localhost:5174 (or next available port)
-Features:
+
+## Features:
 Login form
 AuthContext
 Protected routes using <Outlet>
