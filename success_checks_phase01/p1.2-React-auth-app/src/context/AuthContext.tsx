@@ -22,7 +22,7 @@ export const useAuth = () => {
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
-  
+  // here for real auth ,we need to check login status from localStorage to persist user session across page refreshes
   const [user, setUser] = useState<User | null>(() => {
     const stored = localStorage.getItem("user");
     return stored ? JSON.parse(stored) : null;

@@ -28,7 +28,7 @@ http://localhost:5173
 Each Success-checks is fully independent.
 
 ## React Auth App (Phase 1.2 Success Check)
-cd succcess_checks_phase01/p1.2_React-auth-app
+cd success_checks_phase01/p1.2_React-auth-app
 npm install
 npm run dev
 
