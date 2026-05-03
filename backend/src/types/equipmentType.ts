@@ -1,7 +1,14 @@
+
+
+export type EquipmentStatus = 'active' | 'maintenance' | 'offline';
+
 export type Equipment = {
-    id?: number;
     name: string;
-    type: 'server' | 'switch';
+    type: string;
     make: string;
-    tag: string;
+    model: string;
+    rack: string;
+    unitPosition: number;
+    status: string;
+    tags: string[];
 };
