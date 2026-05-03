@@ -24,6 +24,7 @@ export default function EquipmentTable({ data, onRowClick }: Props) {
                     <th>Type</th>
                     <th>Make</th>
                     <th>Rack</th>
+                    <th>Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +38,7 @@ export default function EquipmentTable({ data, onRowClick }: Props) {
                         <td>{item.type}</td>
                         <td>{item.make}</td>
                         <td>{item.rack}</td>
+                        <td>{item.status}</td>
                     </tr>
                 ))}
             </tbody>
