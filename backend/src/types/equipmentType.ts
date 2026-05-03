@@ -3,6 +3,7 @@
 export type EquipmentStatus = 'active' | 'maintenance' | 'offline';
 
 export type Equipment = {
+    id?: number;
     name: string;
     type: string;
     make: string;

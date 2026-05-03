@@ -5,6 +5,7 @@
   "main": "index.js",
  "scripts": {
   "seed": "ts-node src/scripts/seed.ts",
+  "start": "ts-node src/scripts/export.ts",
   "build": "tsc"
 },
   "keywords": [],
