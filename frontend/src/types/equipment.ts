@@ -7,7 +7,7 @@ export type Equipment = {
     rack: string;
     unitPosition: number;
     status: string;
-    tag: string;
+    tags: string[];
 };
 
 export type ApiResponse<T> = {
