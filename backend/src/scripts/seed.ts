@@ -25,7 +25,7 @@ async function seed(): Promise<void> {
     await pool.query(`
   CREATE TABLE IF NOT EXISTS equipment (
     id SERIAL PRIMARY KEY,
-    name TEXT NOT NULL,
+    name TEXT NOT NULL UNIQUE,
     type TEXT NOT NULL,
     make TEXT NOT NULL,
     model TEXT NOT NULL,
@@ -34,7 +34,7 @@ async function seed(): Promise<void> {
     status TEXT NOT NULL DEFAULT 'active',
     tags JSONB NOT NULL,
     created_at TIMESTAMP DEFAULT NOW()
-  )
+  );
 `);
 
     console.log("Table ready");
@@ -76,10 +76,11 @@ async function seed(): Promise<void> {
             tags: getTags(),
         };
 
-        await pool.query(
+        const result = await pool.query(
             `INSERT INTO equipment 
-      (name, type, make, model, rack, unit_position, status, tags)
-      VALUES ($1,$2,$3,$4,$5,$6,$7,$8)`,
+   (name, type, make, model, rack, unit_position, status, tags)
+   VALUES ($1,$2,$3,$4,$5,$6,$7,$8)
+   ON CONFLICT (name) DO NOTHING`,
             [
                 equipment.name,
                 equipment.type,
@@ -92,7 +93,10 @@ async function seed(): Promise<void> {
             ]
         );
 
-        insertedrow++;
+        if (result.rowCount === 1) {
+            insertedrow++;
+        };
+
     }
 
     console.log(`Successfully inserted ${insertedrow} records`);
