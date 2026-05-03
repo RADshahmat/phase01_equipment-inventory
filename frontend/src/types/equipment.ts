@@ -1,9 +1,5 @@
-
-
-export type EquipmentStatus = 'active' | 'maintenance' | 'offline';
-
 export type Equipment = {
-    id?: number;
+    id: number;
     name: string;
     type: string;
     make: string;
@@ -12,4 +8,10 @@ export type Equipment = {
     unitPosition: number;
     status: string;
     tags: string[];
+};
+
+export type ApiResponse<T> = {
+    success: boolean;
+    count: number;
+    data: T[];
 };
