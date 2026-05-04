@@ -5,7 +5,7 @@ export type Equipment = {
     make: string;
     model: string;
     rack: string;
-    unitPosition: number;
+    unitposition: number;
     status: string;
     tags: string[];
 };

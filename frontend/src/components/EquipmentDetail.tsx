@@ -8,59 +8,91 @@ type Props = {
 export default function EquipmentDetail({ item, onClose }: Props) {
     if (!item) return null;
 
+    const statusStyle =
+        item.status === "active"
+            ? "bg-green-100 text-green-700"
+            : item.status === "offline"
+                ? "bg-red-100 text-red-700"
+                : "bg-yellow-100 text-yellow-700";
+
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
+
             {/* Modal Card */}
-            <div className="bg-white w-full max-w-lg rounded-2xl shadow-xl p-6 relative">
+            <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
 
-                {/* Close Button */}
-                <button
-                    onClick={onClose}
-                    className="absolute top-3 right-3 text-gray-500 hover:text-black text-xl"
-                >
-                    ✕
-                </button>
+                {/* Header */}
+                <div className="flex items-center align-items justify-between px-6 py-4 border-b">
+                
+                        <h2 className="color-blue-500 text-xl font-bold text-gray-800">
+                            {item.name}
+                        </h2>
+     
+                    <button
+                        onClick={onClose}
+                        className="text-gray-500 hover:text-black text-xl"
+                    >
+                        ✕
+                    </button>
+                </div>
 
-                {/* Title */}
-                <h2 className="text-2xl font-bold mb-4">{item.name}</h2>
+                {/* Body */}
+                <div className="p-6 space-y-6">
 
-                {/* Content */}
-                <div className="space-y-2 text-gray-700">
-                    <p><span className="font-semibold">Type:</span> {item.type}</p>
-                    <p><span className="font-semibold">Make:</span> {item.make}</p>
-                    <p><span className="font-semibold">Model:</span> {item.model}</p>
-                    <p><span className="font-semibold">Rack:</span> {item.rack}</p>
-                    <p><span className="font-semibold">Unit:</span> {item.unitPosition}</p>
+                    {/* Top Info Cards */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
 
-                    {/* Status badge */}
-                    <p>
-                        <span className="font-semibold">Status:</span>{" "}
-                        <span
-                            className={`px-2 py-1 rounded text-sm ${item.status === "active"
-                                    ? "bg-green-100 text-green-700"
-                                    : item.status === "offline"
-                                        ? "bg-red-100 text-red-700"
-                                        : "bg-yellow-100 text-yellow-700"
-                                }`}
-                        >
-                            {item.status}
-                        </span>
-                    </p>
+                        <div className="bg-gray-50 p-3 rounded-lg">
+                            <p className="text-xs text-gray-500">Type</p>
+                            <p className="font-semibold capitalize">{item.type}</p>
+                        </div>
 
-                    {/* Tags */}
+                        <div className="bg-gray-50 p-3 rounded-lg">
+                            <p className="text-xs text-gray-500">Make</p>
+                            <p className="font-semibold">{item.make}</p>
+                        </div>
+
+                        <div className="bg-gray-50 p-3 rounded-lg">
+                            <p className="text-xs text-gray-500">Model</p>
+                            <p className="font-semibold">{item.model}</p>
+                        </div>
+
+                        <div className="bg-gray-50 p-3 rounded-lg">
+                            <p className="text-xs text-gray-500">Rack</p>
+                            <p className="font-semibold">{item.rack}</p>
+                        </div>
+
+                        <div className="bg-gray-50 p-3 rounded-lg">
+                            <p className="text-xs text-gray-500">Unit Position</p>
+                            <p className="font-semibold">{item.unitposition}</p>
+                        </div>
+
+                        <div className="bg-gray-50 p-3 rounded-lg">
+                            <p className="text-xs text-gray-500">Status</p>
+                            <span className={`inline-block mt-1 px-2 py-1 rounded text-xs font-medium ${statusStyle}`}>
+                                {item.status}
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Tags Section */}
                     <div>
-                        <span className="font-semibold">Tags:</span>
-                        <div className="flex flex-wrap gap-2 mt-1">
+                        <p className="text-sm font-semibold text-gray-700 mb-2">
+                            Tags
+                        </p>
+
+                        <div className="flex flex-wrap gap-2">
                             {item.tags.map((tag, i) => (
                                 <span
                                     key={i}
-                                    className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-sm"
+                                    className="px-3 py-1 text-xs rounded-full bg-blue-50 text-blue-600 border border-blue-100"
                                 >
-                                    {tag}
+                                    #{tag}
                                 </span>
                             ))}
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
