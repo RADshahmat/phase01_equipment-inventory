@@ -38,16 +38,16 @@ export default function Home() {
     }, [data, type, make, search]);
 
     return (
-        <div className="w-full  p-6">
+        <div className="w-full ">
             <div className="max-w-6xl mx-auto">
 
                 {/* Header */}
-                <h1 className="text-red-500 text-2xl font-bold mb-6">
-                    Equipment Inventory
+                <h1 className=" text-2xl font-bold mb-6">
+                   Static Equipment Inventory
                 </h1>
 
                 {/* Filters Card */}
-                <div className="bg-white p-4 rounded-2xl shadow-sm mb-4">
+                <div className="flex items-center gap-4 bg-white  rounded-2xl shadow-sm mb-4 pl-5">
                     <SearchBar value={search} onChange={setSearch} />
                     <FilterBar
                         type={type}
@@ -55,6 +55,7 @@ export default function Home() {
                         onTypeChange={setType}
                         onMakeChange={setMake}
                     />
+
                 </div>
 
                 {/* Table */}

@@ -8,7 +8,7 @@ A web application for viewing and managing IT equipment including servers, switc
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 
 
-![Equipment Inventory Preview](./screenshots/dashboard.png)
+![Equipment Inventory Preview](./app_pic.png)
 
 
 ---
