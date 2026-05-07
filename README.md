@@ -80,10 +80,10 @@ cd backend
 npm install
 ```
 
-Create a `.env` file in the `backend` directory:
+Create a `.env` file in the `backend` directory. Example for the localhost setup:
 
 ```env
-DB_HOST=localhost
+DB_HOST=localhos
 DB_PORT=5432
 DB_USER=postgres
 DB_PASSWORD=your_password
