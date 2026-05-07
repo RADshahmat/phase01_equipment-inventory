@@ -6,6 +6,7 @@
  "scripts": {
   "seed": "ts-node src/scripts/seed.ts",
   "start": "ts-node src/scripts/export.ts",
+  "lint": "eslint src --ext .ts,.tsx",
   "build": "tsc"
 },
   "keywords": [],
