@@ -13,12 +13,21 @@ export default function Home() {
     const [make, setMake] = useState("");
     const [search, setSearch] = useState("");
     const [selected, setSelected] = useState<Equipment | null>(null);
+    const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         fetchEquipment().then((res) => {
             setData(res);
         });
     }, []);
+
+    useEffect(() => {
+        if (darkMode) {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    }, [darkMode]);
 
     const filtered = useMemo(() => {
         return data.filter((e) => {
@@ -39,13 +48,18 @@ export default function Home() {
 
     return (
         <div className="w-full ">
-            <div className="max-w-6xl mx-auto">
+            <div className=" mx-auto bg-teal-500 dark:bg-gray-900 min-h-screen p-6">
 
                 {/* Header */}
                 <h1 className=" text-2xl font-bold mb-6">
                    Static Equipment Inventory
                 </h1>
-
+                <button
+                    onClick={() => setDarkMode(!darkMode)}
+                    className="mb-3 px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:scale-105 transition"
+                >
+                    {darkMode ? "☀ Light" : "🌙 Dark"}
+                </button>
                 {/* Filters Card */}
                 <div className="flex items-center gap-4 bg-white  rounded-2xl shadow-sm mb-4 pl-5">
                     <SearchBar value={search} onChange={setSearch} />
