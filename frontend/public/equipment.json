@@ -1,125 +1,124 @@
 {
   "success": true,
-  "count": 50,
+  "count": 170,
   "data": [
     {
       "id": 1,
-      "name": "APC-Smart-UPS 3900-1",
-      "type": "server",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-B1",
-      "unitposition": 13,
-      "status": "offline",
+      "name": "HP-ProLiant DL380-1",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-C1",
+      "unitposition": 7,
+      "status": "active",
       "tags": [
+        "critical",
         "backup",
-        "production"
+        "network"
       ]
     },
     {
       "id": 2,
-      "name": "Dell-PowerEdge R740-2",
-      "type": "switch",
-      "make": "Dell",
-      "model": "PowerEdge R740",
-      "rack": "Rack-A1",
-      "unitposition": 6,
-      "status": "active",
+      "name": "Cisco-Nexus 9000-2",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B2",
+      "unitposition": 39,
+      "status": "offline",
       "tags": [
-        "backup",
-        "production"
+        "critical",
+        "core"
       ]
     },
     {
       "id": 3,
-      "name": "APC-Smart-UPS 1500-3",
+      "name": "Dell-PowerEdge R640-3",
       "type": "ups",
-      "make": "APC",
-      "model": "Smart-UPS 1500",
-      "rack": "Rack-A2",
-      "unitposition": 32,
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-A1",
+      "unitposition": 41,
       "status": "offline",
       "tags": [
-        "production",
         "core",
-        "edge",
-        "compute"
+        "critical",
+        "production"
       ]
     },
     {
       "id": 4,
-      "name": "Dell-PowerEdge R740-4",
-      "type": "server",
-      "make": "Dell",
-      "model": "PowerEdge R740",
-      "rack": "Rack-B1",
-      "unitposition": 21,
-      "status": "active",
+      "name": "Cisco-ISR 4451-4",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-B2",
+      "unitposition": 25,
+      "status": "maintenance",
       "tags": [
-        "production",
         "core",
+        "production",
         "critical"
       ]
     },
     {
       "id": 5,
-      "name": "APC-Smart-UPS 3900-5",
-      "type": "router",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-A1",
-      "unitposition": 16,
-      "status": "active",
+      "name": "HP-ProLiant DL360-5",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-C1",
+      "unitposition": 19,
+      "status": "maintenance",
       "tags": [
-        "power-source",
-        "compute",
-        "network"
-      ]
-    },
-    {
-      "id": 6,
-      "name": "Cisco-Nexus 9000-6",
-      "type": "server",
-      "make": "Cisco",
-      "model": "Nexus 9000",
-      "rack": "Rack-B1",
-      "unitposition": 37,
-      "status": "offline",
-      "tags": [
-        "rack-mounted",
-        "network",
-        "power-source",
+        "backup",
+        "edge",
         "critical"
       ]
     },
     {
-      "id": 7,
-      "name": "HP-ProLiant DL360-7",
-      "type": "server",
+      "id": 6,
+      "name": "HP-ProLiant DL380-6",
+      "type": "ups",
       "make": "HP",
-      "model": "ProLiant DL360",
-      "rack": "Rack-A1",
-      "unitposition": 28,
-      "status": "active",
+      "model": "ProLiant DL380",
+      "rack": "Rack-C1",
+      "unitposition": 17,
+      "status": "maintenance",
       "tags": [
+        "compute",
+        "power-source",
         "production",
-        "core",
-        "edge"
+        "core"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "APC-Smart-UPS 1500-7",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A1",
+      "unitposition": 1,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "edge",
+        "critical"
       ]
     },
     {
       "id": 8,
-      "name": "Dell-PowerEdge R640-8",
-      "type": "switch",
-      "make": "Dell",
-      "model": "PowerEdge R640",
-      "rack": "Rack-B1",
-      "unitposition": 27,
-      "status": "maintenance",
+      "name": "Cisco-Nexus 9000-8",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-A1",
+      "unitposition": 24,
+      "status": "offline",
       "tags": [
-        "production",
+        "core",
         "rack-mounted",
-        "edge",
         "compute"
       ]
     },
@@ -129,43 +128,43 @@
       "type": "switch",
       "make": "APC",
       "model": "Smart-UPS 3900",
-      "rack": "Rack-A1",
-      "unitposition": 15,
-      "status": "active",
+      "rack": "Rack-B2",
+      "unitposition": 3,
+      "status": "offline",
       "tags": [
-        "edge",
-        "core",
-        "rack-mounted"
+        "compute",
+        "edge"
       ]
     },
     {
       "id": 10,
-      "name": "Cisco-Catalyst 9300-10",
-      "type": "router",
-      "make": "Cisco",
-      "model": "Catalyst 9300",
+      "name": "APC-Smart-UPS 3900-10",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
       "rack": "Rack-B2",
-      "unitposition": 26,
+      "unitposition": 38,
       "status": "active",
       "tags": [
-        "edge",
-        "production",
-        "power-source",
-        "network"
+        "compute",
+        "rack-mounted",
+        "production"
       ]
     },
     {
       "id": 11,
-      "name": "HP-ProLiant DL360-11",
+      "name": "Cisco-ISR 4451-11",
       "type": "ups",
-      "make": "HP",
-      "model": "ProLiant DL360",
+      "make": "Cisco",
+      "model": "ISR 4451",
       "rack": "Rack-B1",
-      "unitposition": 37,
+      "unitposition": 31,
       "status": "offline",
       "tags": [
-        "backup",
-        "core"
+        "network",
+        "critical",
+        "edge",
+        "compute"
       ]
     },
     {
@@ -174,67 +173,82 @@
       "type": "ups",
       "make": "Cisco",
       "model": "Catalyst 9300",
-      "rack": "Rack-C1",
-      "unitposition": 37,
-      "status": "offline",
+      "rack": "Rack-B2",
+      "unitposition": 8,
+      "status": "active",
       "tags": [
-        "edge",
-        "critical"
+        "production",
+        "power-source"
       ]
     },
     {
       "id": 13,
-      "name": "HP-ProLiant DL360-13",
-      "type": "switch",
+      "name": "HP-ProLiant DL380-13",
+      "type": "router",
       "make": "HP",
-      "model": "ProLiant DL360",
+      "model": "ProLiant DL380",
       "rack": "Rack-B2",
-      "unitposition": 33,
-      "status": "offline",
+      "unitposition": 25,
+      "status": "active",
       "tags": [
-        "critical",
-        "production",
-        "rack-mounted",
-        "power-source"
+        "edge",
+        "compute",
+        "critical"
       ]
     },
     {
       "id": 14,
       "name": "Dell-PowerEdge R740-14",
-      "type": "ups",
+      "type": "router",
       "make": "Dell",
       "model": "PowerEdge R740",
-      "rack": "Rack-B2",
-      "unitposition": 9,
-      "status": "active",
+      "rack": "Rack-A1",
+      "unitposition": 24,
+      "status": "offline",
       "tags": [
-        "network",
-        "edge"
+        "production",
+        "compute",
+        "core"
       ]
     },
     {
       "id": 15,
-      "name": "APC-Smart-UPS 3900-15",
+      "name": "Cisco-Nexus 9000-15",
       "type": "router",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-C1",
-      "unitposition": 20,
-      "status": "offline",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-A1",
+      "unitposition": 28,
+      "status": "active",
       "tags": [
-        "core",
-        "power-source",
-        "critical"
+        "edge",
+        "power-source"
       ]
     },
     {
       "id": 16,
-      "name": "APC-Smart-UPS 1500-16",
+      "name": "APC-Smart-UPS 3900-16",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B1",
+      "unitposition": 10,
+      "status": "active",
+      "tags": [
+        "power-source",
+        "compute",
+        "network",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "APC-Smart-UPS 3900-17",
       "type": "server",
       "make": "APC",
-      "model": "Smart-UPS 1500",
+      "model": "Smart-UPS 3900",
       "rack": "Rack-B1",
-      "unitposition": 5,
+      "unitposition": 14,
       "status": "active",
       "tags": [
         "critical",
@@ -242,252 +256,164 @@
       ]
     },
     {
-      "id": 17,
-      "name": "Dell-PowerEdge R740-17",
+      "id": 18,
+      "name": "Dell-PowerEdge R640-18",
       "type": "router",
       "make": "Dell",
-      "model": "PowerEdge R740",
-      "rack": "Rack-B2",
-      "unitposition": 39,
-      "status": "offline",
-      "tags": [
-        "rack-mounted",
-        "core",
-        "backup"
-      ]
-    },
-    {
-      "id": 18,
-      "name": "HP-ProLiant DL380-18",
-      "type": "switch",
-      "make": "HP",
-      "model": "ProLiant DL380",
+      "model": "PowerEdge R640",
       "rack": "Rack-A2",
-      "unitposition": 30,
-      "status": "offline",
+      "unitposition": 22,
+      "status": "maintenance",
       "tags": [
         "backup",
-        "network",
-        "power-source",
-        "edge"
+        "core",
+        "production"
       ]
     },
     {
       "id": 19,
-      "name": "Dell-PowerEdge R640-19",
-      "type": "server",
-      "make": "Dell",
-      "model": "PowerEdge R640",
-      "rack": "Rack-A1",
-      "unitposition": 33,
+      "name": "Cisco-Nexus 9000-19",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-C1",
+      "unitposition": 5,
       "status": "maintenance",
       "tags": [
-        "core",
-        "backup",
-        "rack-mounted"
+        "edge",
+        "rack-mounted",
+        "network"
       ]
     },
     {
       "id": 20,
-      "name": "Dell-PowerEdge R640-20",
-      "type": "switch",
-      "make": "Dell",
-      "model": "PowerEdge R640",
-      "rack": "Rack-B1",
-      "unitposition": 18,
-      "status": "offline",
+      "name": "HP-ProLiant DL360-20",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 39,
+      "status": "maintenance",
       "tags": [
-        "critical",
-        "rack-mounted"
+        "production",
+        "core"
       ]
     },
     {
       "id": 21,
-      "name": "Dell-PowerEdge R640-21",
+      "name": "Cisco-ISR 4451-21",
       "type": "router",
-      "make": "Dell",
-      "model": "PowerEdge R640",
-      "rack": "Rack-A1",
-      "unitposition": 23,
-      "status": "maintenance",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-B1",
+      "unitposition": 19,
+      "status": "offline",
       "tags": [
+        "edge",
+        "compute",
         "critical",
-        "rack-mounted",
-        "backup"
+        "core"
       ]
     },
     {
       "id": 22,
-      "name": "HP-ProLiant DL380-22",
-      "type": "server",
-      "make": "HP",
-      "model": "ProLiant DL380",
-      "rack": "Rack-B1",
-      "unitposition": 40,
+      "name": "Cisco-ISR 4451-22",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-A2",
+      "unitposition": 19,
       "status": "maintenance",
       "tags": [
         "production",
         "critical",
+        "core",
         "backup"
       ]
     },
     {
       "id": 23,
-      "name": "Dell-PowerEdge R740-23",
-      "type": "server",
-      "make": "Dell",
-      "model": "PowerEdge R740",
-      "rack": "Rack-B1",
-      "unitposition": 6,
-      "status": "active",
+      "name": "APC-Smart-UPS 3900-23",
+      "type": "router",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B2",
+      "unitposition": 42,
+      "status": "maintenance",
       "tags": [
-        "power-source",
-        "edge",
-        "core"
+        "backup",
+        "power-source"
       ]
     },
     {
       "id": 24,
-      "name": "APC-Smart-UPS 3900-24",
-      "type": "router",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-A2",
-      "unitposition": 27,
+      "name": "HP-ProLiant DL360-24",
+      "type": "server",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-C1",
+      "unitposition": 12,
       "status": "maintenance",
       "tags": [
-        "backup",
-        "edge",
-        "rack-mounted"
+        "rack-mounted",
+        "network",
+        "compute",
+        "power-source"
       ]
     },
     {
       "id": 25,
-      "name": "Cisco-Catalyst 9300-25",
-      "type": "server",
-      "make": "Cisco",
-      "model": "Catalyst 9300",
-      "rack": "Rack-C1",
-      "unitposition": 27,
-      "status": "active",
+      "name": "APC-Smart-UPS 1500-25",
+      "type": "router",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A1",
+      "unitposition": 1,
+      "status": "maintenance",
       "tags": [
         "production",
-        "core",
-        "edge",
+        "critical",
+        "power-source",
         "backup"
       ]
     },
     {
       "id": 26,
-      "name": "HP-ProLiant DL360-26",
-      "type": "server",
+      "name": "HP-ProLiant DL380-26",
+      "type": "router",
       "make": "HP",
-      "model": "ProLiant DL360",
-      "rack": "Rack-B1",
-      "unitposition": 8,
-      "status": "maintenance",
-      "tags": [
-        "edge",
-        "backup"
-      ]
-    },
-    {
-      "id": 27,
-      "name": "Cisco-ISR 4451-27",
-      "type": "ups",
-      "make": "Cisco",
-      "model": "ISR 4451",
-      "rack": "Rack-A2",
+      "model": "ProLiant DL380",
+      "rack": "Rack-A1",
       "unitposition": 32,
-      "status": "active",
+      "status": "maintenance",
       "tags": [
         "production",
-        "core"
-      ]
-    },
-    {
-      "id": 28,
-      "name": "APC-Smart-UPS 1500-28",
-      "type": "switch",
-      "make": "APC",
-      "model": "Smart-UPS 1500",
-      "rack": "Rack-B1",
-      "unitposition": 3,
-      "status": "active",
-      "tags": [
-        "critical",
-        "backup"
-      ]
-    },
-    {
-      "id": 29,
-      "name": "APC-Smart-UPS 3900-29",
-      "type": "server",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-B1",
-      "unitposition": 29,
-      "status": "maintenance",
-      "tags": [
         "core",
-        "compute",
-        "critical",
         "power-source"
       ]
     },
     {
-      "id": 30,
-      "name": "APC-Smart-UPS 3900-30",
-      "type": "server",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-B1",
-      "unitposition": 39,
-      "status": "maintenance",
-      "tags": [
-        "critical",
-        "backup",
-        "edge",
-        "core"
-      ]
-    },
-    {
-      "id": 31,
-      "name": "Cisco-Nexus 9000-31",
+      "id": 27,
+      "name": "Cisco-Nexus 9000-27",
       "type": "server",
       "make": "Cisco",
       "model": "Nexus 9000",
-      "rack": "Rack-C1",
-      "unitposition": 11,
-      "status": "offline",
-      "tags": [
-        "edge",
-        "rack-mounted"
-      ]
-    },
-    {
-      "id": 32,
-      "name": "APC-Smart-UPS 3900-32",
-      "type": "ups",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-A2",
-      "unitposition": 8,
-      "status": "maintenance",
-      "tags": [
-        "production",
-        "rack-mounted",
-        "critical"
-      ]
-    },
-    {
-      "id": 33,
-      "name": "Dell-PowerEdge R740-33",
-      "type": "ups",
-      "make": "Dell",
-      "model": "PowerEdge R740",
       "rack": "Rack-B2",
-      "unitposition": 21,
+      "unitposition": 25,
+      "status": "active",
+      "tags": [
+        "power-source",
+        "production"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Cisco-ISR 4451-28",
+      "type": "router",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-C1",
+      "unitposition": 24,
       "status": "active",
       "tags": [
         "backup",
@@ -495,43 +421,102 @@
       ]
     },
     {
-      "id": 34,
-      "name": "Dell-PowerEdge R740-34",
-      "type": "server",
-      "make": "Dell",
-      "model": "PowerEdge R740",
+      "id": 29,
+      "name": "Cisco-Nexus 9000-29",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "Nexus 9000",
       "rack": "Rack-B2",
-      "unitposition": 18,
-      "status": "offline",
+      "unitposition": 4,
+      "status": "active",
       "tags": [
-        "compute",
+        "backup",
         "power-source",
         "network",
+        "critical"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "HP-ProLiant DL360-30",
+      "type": "server",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 30,
+      "status": "active",
+      "tags": [
+        "production",
         "core"
       ]
     },
     {
-      "id": 35,
-      "name": "APC-Smart-UPS 3900-35",
-      "type": "ups",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
+      "id": 31,
+      "name": "Dell-PowerEdge R740-31",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R740",
       "rack": "Rack-B1",
-      "unitposition": 14,
-      "status": "maintenance",
+      "unitposition": 15,
+      "status": "offline",
       "tags": [
         "network",
-        "production"
+        "critical"
       ]
     },
     {
-      "id": 36,
-      "name": "Cisco-Catalyst 9300-36",
-      "type": "ups",
-      "make": "Cisco",
-      "model": "Catalyst 9300",
+      "id": 32,
+      "name": "APC-Smart-UPS 3900-32",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-C1",
+      "unitposition": 36,
+      "status": "offline",
+      "tags": [
+        "compute",
+        "core",
+        "production",
+        "critical"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "HP-ProLiant DL360-33",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-C1",
+      "unitposition": 42,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "compute"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "APC-Smart-UPS 1500-34",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
       "rack": "Rack-B1",
-      "unitposition": 19,
+      "unitposition": 41,
+      "status": "maintenance",
+      "tags": [
+        "network",
+        "rack-mounted",
+        "power-source"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Dell-PowerEdge R740-35",
+      "type": "server",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A2",
+      "unitposition": 8,
       "status": "active",
       "tags": [
         "production",
@@ -540,147 +525,950 @@
       ]
     },
     {
-      "id": 37,
-      "name": "APC-Smart-UPS 1500-37",
-      "type": "server",
-      "make": "APC",
-      "model": "Smart-UPS 1500",
-      "rack": "Rack-C1",
-      "unitposition": 12,
-      "status": "active",
+      "id": 36,
+      "name": "Dell-PowerEdge R640-36",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-B2",
+      "unitposition": 21,
+      "status": "maintenance",
       "tags": [
-        "power-source",
+        "core",
         "backup",
+        "compute",
+        "critical"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Cisco-ISR 4451-37",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-C1",
+      "unitposition": 40,
+      "status": "offline",
+      "tags": [
         "edge",
-        "production"
+        "compute"
       ]
     },
     {
       "id": 38,
-      "name": "HP-ProLiant DL360-38",
-      "type": "switch",
-      "make": "HP",
-      "model": "ProLiant DL360",
-      "rack": "Rack-A2",
-      "unitposition": 29,
-      "status": "offline",
+      "name": "Dell-PowerEdge R740-38",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-C1",
+      "unitposition": 17,
+      "status": "active",
       "tags": [
-        "production",
-        "compute",
-        "core"
+        "critical",
+        "rack-mounted"
       ]
     },
     {
       "id": 39,
       "name": "HP-ProLiant DL380-39",
-      "type": "router",
+      "type": "switch",
       "make": "HP",
       "model": "ProLiant DL380",
-      "rack": "Rack-C1",
-      "unitposition": 15,
-      "status": "offline",
+      "rack": "Rack-A2",
+      "unitposition": 12,
+      "status": "active",
       "tags": [
-        "edge",
-        "core"
+        "network",
+        "rack-mounted",
+        "production"
       ]
     },
     {
       "id": 40,
-      "name": "HP-ProLiant DL380-40",
+      "name": "APC-Smart-UPS 3900-40",
       "type": "router",
-      "make": "HP",
-      "model": "ProLiant DL380",
-      "rack": "Rack-C1",
-      "unitposition": 19,
-      "status": "maintenance",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-A1",
+      "unitposition": 16,
+      "status": "offline",
       "tags": [
         "backup",
-        "production",
-        "core",
-        "power-source"
+        "production"
       ]
     },
     {
       "id": 41,
-      "name": "HP-ProLiant DL380-41",
-      "type": "server",
-      "make": "HP",
-      "model": "ProLiant DL380",
-      "rack": "Rack-B1",
-      "unitposition": 6,
-      "status": "maintenance",
+      "name": "Dell-PowerEdge R740-41",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A2",
+      "unitposition": 38,
+      "status": "active",
       "tags": [
         "compute",
-        "power-source"
+        "backup",
+        "edge"
       ]
     },
     {
       "id": 42,
-      "name": "APC-Smart-UPS 3900-42",
-      "type": "router",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-B2",
-      "unitposition": 40,
-      "status": "active",
-      "tags": [
-        "edge",
-        "compute"
-      ]
-    },
-    {
-      "id": 43,
-      "name": "APC-Smart-UPS 3900-43",
-      "type": "switch",
-      "make": "APC",
-      "model": "Smart-UPS 3900",
-      "rack": "Rack-C1",
-      "unitposition": 21,
-      "status": "active",
-      "tags": [
-        "rack-mounted",
-        "production",
-        "network"
-      ]
-    },
-    {
-      "id": 44,
-      "name": "Cisco-Nexus 9000-44",
-      "type": "ups",
+      "name": "Cisco-ISR 4451-42",
+      "type": "server",
       "make": "Cisco",
-      "model": "Nexus 9000",
-      "rack": "Rack-B1",
-      "unitposition": 10,
-      "status": "maintenance",
+      "model": "ISR 4451",
+      "rack": "Rack-B2",
+      "unitposition": 4,
+      "status": "active",
       "tags": [
-        "edge",
+        "backup",
+        "production",
         "core"
       ]
     },
     {
-      "id": 45,
-      "name": "Cisco-Catalyst 9300-45",
-      "type": "switch",
-      "make": "Cisco",
-      "model": "Catalyst 9300",
-      "rack": "Rack-C1",
-      "unitposition": 31,
+      "id": 43,
+      "name": "HP-ProLiant DL360-43",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 29,
       "status": "maintenance",
       "tags": [
-        "compute",
         "backup",
+        "compute",
+        "core",
+        "critical"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "APC-Smart-UPS 3900-44",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B2",
+      "unitposition": 32,
+      "status": "offline",
+      "tags": [
         "production",
+        "compute"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "HP-ProLiant DL380-45",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-B1",
+      "unitposition": 21,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "compute",
+        "network",
         "power-source"
       ]
     },
     {
       "id": 46,
-      "name": "Dell-PowerEdge R740-46",
+      "name": "HP-ProLiant DL360-46",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-C1",
+      "unitposition": 29,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "backup",
+        "compute",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Cisco-ISR 4451-47",
+      "type": "server",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-C1",
+      "unitposition": 2,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "compute",
+        "backup"
+      ]
+    },
+    {
+      "id": 48,
+      "name": "Dell-PowerEdge R640-48",
+      "type": "ups",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-A1",
+      "unitposition": 11,
+      "status": "offline",
+      "tags": [
+        "production",
+        "network"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Cisco-ISR 4451-49",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-B2",
+      "unitposition": 35,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "production"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "APC-Smart-UPS 1500-50",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-B2",
+      "unitposition": 1,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "critical",
+        "production"
+      ]
+    },
+    {
+      "id": 51,
+      "name": "Dell-PowerEdge R740-1",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-B1",
+      "unitposition": 30,
+      "status": "active",
+      "tags": [
+        "production",
+        "compute",
+        "power-source",
+        "core"
+      ]
+    },
+    {
+      "id": 52,
+      "name": "HP-ProLiant DL360-2",
+      "type": "server",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 14,
+      "status": "maintenance",
+      "tags": [
+        "compute",
+        "network",
+        "production",
+        "core"
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Cisco-Catalyst 9300-3",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-C1",
+      "unitposition": 30,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "backup"
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Cisco-Catalyst 9300-5",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-A2",
+      "unitposition": 35,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "production",
+        "power-source"
+      ]
+    },
+    {
+      "id": 59,
+      "name": "HP-ProLiant DL380-9",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-A1",
+      "unitposition": 13,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "backup"
+      ]
+    },
+    {
+      "id": 60,
+      "name": "APC-Smart-UPS 1500-10",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A1",
+      "unitposition": 33,
+      "status": "maintenance",
+      "tags": [
+        "network",
+        "compute",
+        "power-source"
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Dell-PowerEdge R740-11",
+      "type": "server",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-B2",
+      "unitposition": 27,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "power-source",
+        "compute"
+      ]
+    },
+    {
+      "id": 62,
+      "name": "APC-Smart-UPS 1500-12",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A1",
+      "unitposition": 29,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "production",
+        "compute"
+      ]
+    },
+    {
+      "id": 63,
+      "name": "APC-Smart-UPS 1500-13",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A1",
+      "unitposition": 17,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "power-source"
+      ]
+    },
+    {
+      "id": 64,
+      "name": "HP-ProLiant DL360-14",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 42,
+      "status": "maintenance",
+      "tags": [
+        "network",
+        "rack-mounted",
+        "core"
+      ]
+    },
+    {
+      "id": 65,
+      "name": "APC-Smart-UPS 3900-15",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-C1",
+      "unitposition": 39,
+      "status": "active",
+      "tags": [
+        "rack-mounted",
+        "compute",
+        "critical"
+      ]
+    },
+    {
+      "id": 66,
+      "name": "HP-ProLiant DL360-16",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 36,
+      "status": "maintenance",
+      "tags": [
+        "rack-mounted",
+        "production",
+        "backup",
+        "compute"
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Dell-PowerEdge R740-17",
+      "type": "server",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A1",
+      "unitposition": 21,
+      "status": "maintenance",
+      "tags": [
+        "compute",
+        "production",
+        "core"
+      ]
+    },
+    {
+      "id": 68,
+      "name": "HP-ProLiant DL360-18",
       "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-B2",
+      "unitposition": 18,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "core"
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Dell-PowerEdge R740-19",
+      "type": "ups",
       "make": "Dell",
       "model": "PowerEdge R740",
       "rack": "Rack-C1",
-      "unitposition": 20,
+      "unitposition": 39,
+      "status": "maintenance",
+      "tags": [
+        "rack-mounted",
+        "production",
+        "backup",
+        "network"
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Cisco-Catalyst 9300-20",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-B1",
+      "unitposition": 19,
+      "status": "offline",
+      "tags": [
+        "network",
+        "edge"
+      ]
+    },
+    {
+      "id": 71,
+      "name": "HP-ProLiant DL360-21",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 11,
+      "status": "maintenance",
+      "tags": [
+        "production",
+        "core",
+        "critical"
+      ]
+    },
+    {
+      "id": 72,
+      "name": "APC-Smart-UPS 1500-22",
+      "type": "router",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-B1",
+      "unitposition": 12,
+      "status": "maintenance",
+      "tags": [
+        "compute",
+        "core",
+        "backup",
+        "network"
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Dell-PowerEdge R740-23",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-B2",
+      "unitposition": 22,
+      "status": "active",
+      "tags": [
+        "production",
+        "network",
+        "power-source"
+      ]
+    },
+    {
+      "id": 74,
+      "name": "Dell-PowerEdge R740-24",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A1",
+      "unitposition": 36,
+      "status": "maintenance",
+      "tags": [
+        "core",
+        "edge",
+        "critical"
+      ]
+    },
+    {
+      "id": 75,
+      "name": "Cisco-ISR 4451-25",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-C1",
+      "unitposition": 38,
+      "status": "active",
+      "tags": [
+        "compute",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Cisco-Nexus 9000-26",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B1",
+      "unitposition": 36,
+      "status": "active",
+      "tags": [
+        "backup",
+        "critical",
+        "edge",
+        "network"
+      ]
+    },
+    {
+      "id": 77,
+      "name": "APC-Smart-UPS 3900-27",
+      "type": "router",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-A1",
+      "unitposition": 33,
+      "status": "active",
+      "tags": [
+        "rack-mounted",
+        "critical",
+        "backup"
+      ]
+    },
+    {
+      "id": 78,
+      "name": "HP-ProLiant DL360-28",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 26,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "core",
+        "rack-mounted",
+        "network"
+      ]
+    },
+    {
+      "id": 79,
+      "name": "HP-ProLiant DL380-29",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-A2",
+      "unitposition": 11,
+      "status": "offline",
+      "tags": [
+        "critical",
+        "network"
+      ]
+    },
+    {
+      "id": 80,
+      "name": "APC-Smart-UPS 1500-30",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A1",
+      "unitposition": 34,
+      "status": "active",
+      "tags": [
+        "production",
+        "power-source",
+        "backup"
+      ]
+    },
+    {
+      "id": 81,
+      "name": "Dell-PowerEdge R640-31",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-A2",
+      "unitposition": 39,
+      "status": "maintenance",
+      "tags": [
+        "power-source",
+        "network",
+        "backup"
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Cisco-Catalyst 9300-32",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-B2",
+      "unitposition": 32,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "backup",
+        "compute"
+      ]
+    },
+    {
+      "id": 83,
+      "name": "HP-ProLiant DL380-33",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-A2",
+      "unitposition": 28,
+      "status": "maintenance",
+      "tags": [
+        "production",
+        "core",
+        "edge",
+        "backup"
+      ]
+    },
+    {
+      "id": 84,
+      "name": "Dell-PowerEdge R740-34",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A1",
+      "unitposition": 14,
+      "status": "active",
+      "tags": [
+        "rack-mounted",
+        "compute",
+        "network",
+        "power-source"
+      ]
+    },
+    {
+      "id": 85,
+      "name": "HP-ProLiant DL360-35",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-C1",
+      "unitposition": 5,
+      "status": "offline",
+      "tags": [
+        "critical",
+        "edge",
+        "backup"
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Cisco-Catalyst 9300-36",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-C1",
+      "unitposition": 42,
+      "status": "offline",
+      "tags": [
+        "compute",
+        "backup",
+        "edge",
+        "network"
+      ]
+    },
+    {
+      "id": 87,
+      "name": "HP-ProLiant DL380-37",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-C1",
+      "unitposition": 39,
+      "status": "active",
+      "tags": [
+        "critical",
+        "network",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 88,
+      "name": "Cisco-Catalyst 9300-38",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-B2",
+      "unitposition": 15,
+      "status": "maintenance",
+      "tags": [
+        "core",
+        "rack-mounted",
+        "power-source",
+        "production"
+      ]
+    },
+    {
+      "id": 91,
+      "name": "HP-ProLiant DL380-41",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-C1",
+      "unitposition": 8,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "rack-mounted",
+        "compute",
+        "edge"
+      ]
+    },
+    {
+      "id": 92,
+      "name": "APC-Smart-UPS 1500-42",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A1",
+      "unitposition": 33,
+      "status": "active",
+      "tags": [
+        "network",
+        "production",
+        "core",
+        "edge"
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Dell-PowerEdge R640-43",
+      "type": "server",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-B1",
+      "unitposition": 31,
+      "status": "maintenance",
+      "tags": [
+        "power-source",
+        "backup",
+        "production",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Cisco-Nexus 9000-44",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B2",
+      "unitposition": 24,
+      "status": "offline",
+      "tags": [
+        "production",
+        "backup"
+      ]
+    },
+    {
+      "id": 95,
+      "name": "APC-Smart-UPS 1500-45",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-A2",
+      "unitposition": 16,
+      "status": "maintenance",
+      "tags": [
+        "core",
+        "production",
+        "edge",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 96,
+      "name": "Cisco-ISR 4451-46",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-B1",
+      "unitposition": 4,
+      "status": "active",
+      "tags": [
+        "critical",
+        "network",
+        "compute"
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Dell-PowerEdge R740-47",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A2",
+      "unitposition": 22,
+      "status": "offline",
+      "tags": [
+        "compute",
+        "backup",
+        "core",
+        "critical"
+      ]
+    },
+    {
+      "id": 98,
+      "name": "APC-Smart-UPS 3900-48",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-A2",
+      "unitposition": 27,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "edge",
+        "power-source",
+        "core"
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Cisco-Nexus 9000-49",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B2",
+      "unitposition": 33,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "compute",
+        "network"
+      ]
+    },
+    {
+      "id": 100,
+      "name": "Dell-PowerEdge R740-50",
+      "type": "ups",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-B2",
+      "unitposition": 5,
+      "status": "active",
+      "tags": [
+        "critical",
+        "edge",
+        "power-source",
+        "backup"
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Cisco-ISR 4451-3",
+      "type": "server",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-A1",
+      "unitposition": 12,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "network"
+      ]
+    },
+    {
+      "id": 104,
+      "name": "APC-Smart-UPS 1500-4",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-B1",
+      "unitposition": 15,
+      "status": "offline",
+      "tags": [
+        "edge",
+        "backup",
+        "critical",
+        "core"
+      ]
+    },
+    {
+      "id": 105,
+      "name": "HP-ProLiant DL380-5",
+      "type": "server",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-B1",
+      "unitposition": 28,
+      "status": "active",
+      "tags": [
+        "core",
+        "production"
+      ]
+    },
+    {
+      "id": 106,
+      "name": "APC-Smart-UPS 3900-6",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-A1",
+      "unitposition": 10,
       "status": "active",
       "tags": [
         "backup",
@@ -690,64 +1478,1079 @@
       ]
     },
     {
-      "id": 47,
-      "name": "HP-ProLiant DL360-47",
-      "type": "ups",
+      "id": 107,
+      "name": "HP-ProLiant DL380-7",
+      "type": "router",
       "make": "HP",
-      "model": "ProLiant DL360",
-      "rack": "Rack-B1",
-      "unitposition": 13,
+      "model": "ProLiant DL380",
+      "rack": "Rack-A1",
+      "unitposition": 37,
+      "status": "active",
+      "tags": [
+        "edge",
+        "core",
+        "rack-mounted",
+        "production"
+      ]
+    },
+    {
+      "id": 108,
+      "name": "Cisco-ISR 4451-8",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-B2",
+      "unitposition": 41,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "compute"
+      ]
+    },
+    {
+      "id": 109,
+      "name": "Dell-PowerEdge R640-9",
+      "type": "server",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-C1",
+      "unitposition": 9,
       "status": "offline",
       "tags": [
-        "compute",
         "core",
+        "critical",
+        "backup",
+        "production"
+      ]
+    },
+    {
+      "id": 110,
+      "name": "Cisco-Nexus 9000-10",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B1",
+      "unitposition": 40,
+      "status": "active",
+      "tags": [
+        "critical",
+        "compute",
+        "core"
+      ]
+    },
+    {
+      "id": 111,
+      "name": "Dell-PowerEdge R640-11",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-C1",
+      "unitposition": 28,
+      "status": "offline",
+      "tags": [
+        "power-source",
+        "network",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 112,
+      "name": "APC-Smart-UPS 3900-12",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-A2",
+      "unitposition": 29,
+      "status": "maintenance",
+      "tags": [
+        "power-source",
+        "production",
+        "core",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 116,
+      "name": "Dell-PowerEdge R640-16",
+      "type": "ups",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-B1",
+      "unitposition": 15,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "network",
+        "edge"
+      ]
+    },
+    {
+      "id": 117,
+      "name": "Cisco-Nexus 9000-17",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-A1",
+      "unitposition": 5,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 118,
+      "name": "Cisco-Catalyst 9300-18",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-A1",
+      "unitposition": 8,
+      "status": "maintenance",
+      "tags": [
+        "rack-mounted",
+        "backup",
+        "core",
+        "critical"
+      ]
+    },
+    {
+      "id": 119,
+      "name": "Dell-PowerEdge R640-19",
+      "type": "ups",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-A1",
+      "unitposition": 39,
+      "status": "active",
+      "tags": [
+        "compute",
+        "edge",
+        "core",
+        "critical"
+      ]
+    },
+    {
+      "id": 120,
+      "name": "Cisco-Nexus 9000-20",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-C1",
+      "unitposition": 29,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "rack-mounted",
+        "core"
+      ]
+    },
+    {
+      "id": 121,
+      "name": "HP-ProLiant DL380-21",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-C1",
+      "unitposition": 31,
+      "status": "active",
+      "tags": [
+        "backup",
+        "power-source",
+        "edge",
         "network"
       ]
     },
     {
-      "id": 48,
-      "name": "APC-Smart-UPS 1500-48",
-      "type": "server",
-      "make": "APC",
-      "model": "Smart-UPS 1500",
-      "rack": "Rack-B1",
-      "unitposition": 28,
-      "status": "offline",
+      "id": 122,
+      "name": "Dell-PowerEdge R740-22",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A2",
+      "unitposition": 26,
+      "status": "maintenance",
       "tags": [
-        "compute",
         "production",
         "core",
+        "edge",
         "backup"
       ]
     },
     {
-      "id": 49,
+      "id": 123,
+      "name": "HP-ProLiant DL380-23",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-B2",
+      "unitposition": 11,
+      "status": "offline",
+      "tags": [
+        "compute",
+        "rack-mounted",
+        "backup"
+      ]
+    },
+    {
+      "id": 124,
+      "name": "Cisco-ISR 4451-24",
+      "type": "router",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-A2",
+      "unitposition": 12,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "core",
+        "rack-mounted",
+        "compute"
+      ]
+    },
+    {
+      "id": 125,
+      "name": "Cisco-Catalyst 9300-25",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-C1",
+      "unitposition": 4,
+      "status": "offline",
+      "tags": [
+        "critical",
+        "backup",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 126,
+      "name": "APC-Smart-UPS 1500-26",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-B2",
+      "unitposition": 25,
+      "status": "maintenance",
+      "tags": [
+        "critical",
+        "compute",
+        "backup",
+        "network"
+      ]
+    },
+    {
+      "id": 127,
+      "name": "Dell-PowerEdge R640-27",
+      "type": "ups",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-C1",
+      "unitposition": 17,
+      "status": "active",
+      "tags": [
+        "rack-mounted",
+        "backup",
+        "power-source",
+        "production"
+      ]
+    },
+    {
+      "id": 128,
+      "name": "APC-Smart-UPS 1500-28",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-B1",
+      "unitposition": 21,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "edge",
+        "production",
+        "core"
+      ]
+    },
+    {
+      "id": 129,
+      "name": "APC-Smart-UPS 1500-29",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-C1",
+      "unitposition": 21,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "network",
+        "edge"
+      ]
+    },
+    {
+      "id": 130,
+      "name": "APC-Smart-UPS 3900-30",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B1",
+      "unitposition": 15,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "edge",
+        "core",
+        "critical"
+      ]
+    },
+    {
+      "id": 131,
+      "name": "Cisco-Catalyst 9300-31",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-A2",
+      "unitposition": 12,
+      "status": "offline",
+      "tags": [
+        "network",
+        "rack-mounted",
+        "power-source",
+        "critical"
+      ]
+    },
+    {
+      "id": 132,
+      "name": "HP-ProLiant DL360-32",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-C1",
+      "unitposition": 23,
+      "status": "active",
+      "tags": [
+        "backup",
+        "edge",
+        "core"
+      ]
+    },
+    {
+      "id": 133,
+      "name": "Dell-PowerEdge R640-33",
+      "type": "ups",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-A2",
+      "unitposition": 9,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "backup"
+      ]
+    },
+    {
+      "id": 134,
+      "name": "APC-Smart-UPS 3900-34",
+      "type": "router",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B2",
+      "unitposition": 16,
+      "status": "offline",
+      "tags": [
+        "critical",
+        "network"
+      ]
+    },
+    {
+      "id": 135,
+      "name": "Cisco-Catalyst 9300-35",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-B1",
+      "unitposition": 12,
+      "status": "maintenance",
+      "tags": [
+        "compute",
+        "critical",
+        "production"
+      ]
+    },
+    {
+      "id": 136,
+      "name": "Cisco-ISR 4451-36",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-A2",
+      "unitposition": 3,
+      "status": "maintenance",
+      "tags": [
+        "power-source",
+        "backup",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 137,
+      "name": "Cisco-Nexus 9000-37",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-A2",
+      "unitposition": 12,
+      "status": "active",
+      "tags": [
+        "compute",
+        "network"
+      ]
+    },
+    {
+      "id": 139,
+      "name": "Cisco-ISR 4451-39",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-B2",
+      "unitposition": 6,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "backup"
+      ]
+    },
+    {
+      "id": 140,
+      "name": "HP-ProLiant DL360-40",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 7,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "backup",
+        "core"
+      ]
+    },
+    {
+      "id": 143,
+      "name": "APC-Smart-UPS 1500-43",
+      "type": "server",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-B2",
+      "unitposition": 39,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "compute"
+      ]
+    },
+    {
+      "id": 144,
+      "name": "Dell-PowerEdge R740-44",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-C1",
+      "unitposition": 4,
+      "status": "offline",
+      "tags": [
+        "network",
+        "core",
+        "edge"
+      ]
+    },
+    {
+      "id": 145,
+      "name": "Cisco-Nexus 9000-45",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-C1",
+      "unitposition": 10,
+      "status": "offline",
+      "tags": [
+        "network",
+        "production"
+      ]
+    },
+    {
+      "id": 146,
+      "name": "APC-Smart-UPS 1500-46",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-C1",
+      "unitposition": 5,
+      "status": "offline",
+      "tags": [
+        "production",
+        "core",
+        "compute"
+      ]
+    },
+    {
+      "id": 147,
+      "name": "APC-Smart-UPS 1500-47",
+      "type": "router",
+      "make": "APC",
+      "model": "Smart-UPS 1500",
+      "rack": "Rack-B2",
+      "unitposition": 25,
+      "status": "offline",
+      "tags": [
+        "network",
+        "critical",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 148,
+      "name": "HP-ProLiant DL360-48",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-B1",
+      "unitposition": 14,
+      "status": "offline",
+      "tags": [
+        "compute",
+        "edge",
+        "rack-mounted",
+        "network"
+      ]
+    },
+    {
+      "id": 149,
       "name": "Dell-PowerEdge R740-49",
       "type": "router",
       "make": "Dell",
       "model": "PowerEdge R740",
       "rack": "Rack-B1",
+      "unitposition": 27,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "critical"
+      ]
+    },
+    {
+      "id": 150,
+      "name": "Dell-PowerEdge R640-50",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-B1",
+      "unitposition": 35,
+      "status": "maintenance",
+      "tags": [
+        "rack-mounted",
+        "compute"
+      ]
+    },
+    {
+      "id": 152,
+      "name": "APC-Smart-UPS 3900-2",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B1",
+      "unitposition": 40,
+      "status": "maintenance",
+      "tags": [
+        "network",
+        "power-source"
+      ]
+    },
+    {
+      "id": 154,
+      "name": "Dell-PowerEdge R740-4",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-A1",
+      "unitposition": 42,
+      "status": "offline",
+      "tags": [
+        "core",
+        "rack-mounted",
+        "backup",
+        "network"
+      ]
+    },
+    {
+      "id": 156,
+      "name": "Cisco-Nexus 9000-6",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-A1",
+      "unitposition": 41,
+      "status": "maintenance",
+      "tags": [
+        "compute",
+        "power-source",
+        "production",
+        "backup"
+      ]
+    },
+    {
+      "id": 158,
+      "name": "HP-ProLiant DL380-8",
+      "type": "switch",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-A1",
+      "unitposition": 34,
+      "status": "maintenance",
+      "tags": [
+        "rack-mounted",
+        "network",
+        "critical"
+      ]
+    },
+    {
+      "id": 159,
+      "name": "Cisco-ISR 4451-9",
+      "type": "router",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-C1",
+      "unitposition": 22,
+      "status": "offline",
+      "tags": [
+        "power-source",
+        "core"
+      ]
+    },
+    {
+      "id": 161,
+      "name": "APC-Smart-UPS 3900-11",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-A2",
+      "unitposition": 7,
+      "status": "active",
+      "tags": [
+        "network",
+        "production",
+        "compute"
+      ]
+    },
+    {
+      "id": 162,
+      "name": "Dell-PowerEdge R640-12",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-C1",
+      "unitposition": 18,
+      "status": "active",
+      "tags": [
+        "core",
+        "compute"
+      ]
+    },
+    {
+      "id": 164,
+      "name": "APC-Smart-UPS 3900-14",
+      "type": "ups",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-A1",
       "unitposition": 33,
       "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "compute"
+      ]
+    },
+    {
+      "id": 165,
+      "name": "HP-ProLiant DL360-15",
+      "type": "server",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-A2",
+      "unitposition": 22,
+      "status": "offline",
+      "tags": [
+        "network",
+        "compute",
+        "backup",
+        "edge"
+      ]
+    },
+    {
+      "id": 166,
+      "name": "Dell-PowerEdge R740-16",
+      "type": "server",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-B1",
+      "unitposition": 41,
+      "status": "maintenance",
+      "tags": [
+        "rack-mounted",
+        "edge",
+        "power-source",
+        "network"
+      ]
+    },
+    {
+      "id": 167,
+      "name": "HP-ProLiant DL380-17",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-B2",
+      "unitposition": 16,
+      "status": "active",
+      "tags": [
+        "critical",
+        "power-source"
+      ]
+    },
+    {
+      "id": 168,
+      "name": "APC-Smart-UPS 3900-18",
+      "type": "router",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B2",
+      "unitposition": 22,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "compute"
+      ]
+    },
+    {
+      "id": 169,
+      "name": "HP-ProLiant DL360-19",
+      "type": "server",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-B2",
+      "unitposition": 6,
+      "status": "active",
+      "tags": [
+        "network",
+        "backup"
+      ]
+    },
+    {
+      "id": 171,
+      "name": "Cisco-Catalyst 9300-21",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-A1",
+      "unitposition": 1,
+      "status": "maintenance",
+      "tags": [
+        "compute",
+        "backup",
+        "critical"
+      ]
+    },
+    {
+      "id": 172,
+      "name": "Cisco-Nexus 9000-22",
+      "type": "switch",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B2",
+      "unitposition": 5,
+      "status": "active",
+      "tags": [
+        "production",
+        "core"
+      ]
+    },
+    {
+      "id": 173,
+      "name": "Dell-PowerEdge R640-23",
+      "type": "server",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-C1",
+      "unitposition": 26,
+      "status": "maintenance",
+      "tags": [
+        "edge",
+        "backup",
+        "compute"
+      ]
+    },
+    {
+      "id": 174,
+      "name": "Cisco-Nexus 9000-24",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B1",
+      "unitposition": 5,
+      "status": "maintenance",
+      "tags": [
+        "production",
+        "backup",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 175,
+      "name": "HP-ProLiant DL360-25",
+      "type": "ups",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-B1",
+      "unitposition": 32,
+      "status": "offline",
+      "tags": [
+        "critical",
+        "edge",
+        "rack-mounted"
+      ]
+    },
+    {
+      "id": 177,
+      "name": "Cisco-ISR 4451-27",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-A2",
+      "unitposition": 18,
+      "status": "offline",
+      "tags": [
+        "compute",
+        "edge",
+        "core"
+      ]
+    },
+    {
+      "id": 178,
+      "name": "Dell-PowerEdge R740-28",
+      "type": "ups",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-B2",
+      "unitposition": 24,
+      "status": "maintenance",
+      "tags": [
+        "production",
+        "compute"
+      ]
+    },
+    {
+      "id": 180,
+      "name": "HP-ProLiant DL380-30",
+      "type": "server",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-B1",
+      "unitposition": 23,
+      "status": "maintenance",
+      "tags": [
+        "production",
+        "compute",
+        "power-source"
+      ]
+    },
+    {
+      "id": 181,
+      "name": "HP-ProLiant DL360-31",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-C1",
+      "unitposition": 31,
+      "status": "offline",
+      "tags": [
+        "edge",
+        "core",
+        "network"
+      ]
+    },
+    {
+      "id": 182,
+      "name": "Dell-PowerEdge R640-32",
+      "type": "router",
+      "make": "Dell",
+      "model": "PowerEdge R640",
+      "rack": "Rack-A2",
+      "unitposition": 39,
+      "status": "maintenance",
+      "tags": [
+        "backup",
+        "edge",
+        "rack-mounted",
+        "network"
+      ]
+    },
+    {
+      "id": 185,
+      "name": "HP-ProLiant DL380-35",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL380",
+      "rack": "Rack-B2",
+      "unitposition": 19,
+      "status": "active",
+      "tags": [
+        "edge",
+        "core",
+        "compute",
+        "production"
+      ]
+    },
+    {
+      "id": 186,
+      "name": "HP-ProLiant DL360-36",
+      "type": "router",
+      "make": "HP",
+      "model": "ProLiant DL360",
+      "rack": "Rack-B2",
+      "unitposition": 22,
+      "status": "offline",
+      "tags": [
+        "compute",
+        "critical"
+      ]
+    },
+    {
+      "id": 189,
+      "name": "Cisco-Nexus 9000-39",
+      "type": "ups",
+      "make": "Cisco",
+      "model": "Nexus 9000",
+      "rack": "Rack-B2",
+      "unitposition": 14,
+      "status": "active",
+      "tags": [
+        "compute",
+        "production",
+        "backup"
+      ]
+    },
+    {
+      "id": 191,
+      "name": "APC-Smart-UPS 3900-41",
+      "type": "switch",
+      "make": "APC",
+      "model": "Smart-UPS 3900",
+      "rack": "Rack-B1",
+      "unitposition": 19,
+      "status": "active",
+      "tags": [
+        "core",
+        "backup"
+      ]
+    },
+    {
+      "id": 192,
+      "name": "Cisco-Catalyst 9300-42",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-B2",
+      "unitposition": 37,
+      "status": "offline",
+      "tags": [
+        "production",
+        "core"
+      ]
+    },
+    {
+      "id": 194,
+      "name": "Cisco-Catalyst 9300-44",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-B1",
+      "unitposition": 24,
+      "status": "maintenance",
       "tags": [
         "rack-mounted",
         "production"
       ]
     },
     {
-      "id": 50,
-      "name": "HP-ProLiant DL360-50",
+      "id": 195,
+      "name": "Cisco-Catalyst 9300-45",
+      "type": "router",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-A2",
+      "unitposition": 35,
+      "status": "offline",
+      "tags": [
+        "rack-mounted",
+        "production",
+        "compute",
+        "core"
+      ]
+    },
+    {
+      "id": 196,
+      "name": "Dell-PowerEdge R740-46",
+      "type": "switch",
+      "make": "Dell",
+      "model": "PowerEdge R740",
+      "rack": "Rack-B1",
+      "unitposition": 2,
+      "status": "offline",
+      "tags": [
+        "power-source",
+        "production",
+        "core",
+        "edge"
+      ]
+    },
+    {
+      "id": 197,
+      "name": "Cisco-Catalyst 9300-47",
       "type": "server",
-      "make": "HP",
-      "model": "ProLiant DL360",
-      "rack": "Rack-C1",
-      "unitposition": 39,
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-A2",
+      "unitposition": 9,
+      "status": "offline",
+      "tags": [
+        "edge",
+        "compute"
+      ]
+    },
+    {
+      "id": 198,
+      "name": "Cisco-Catalyst 9300-48",
+      "type": "server",
+      "make": "Cisco",
+      "model": "Catalyst 9300",
+      "rack": "Rack-B2",
+      "unitposition": 7,
       "status": "active",
       "tags": [
         "network",
-        "critical",
-        "production",
-        "compute"
+        "production"
+      ]
+    },
+    {
+      "id": 200,
+      "name": "Cisco-ISR 4451-50",
+      "type": "server",
+      "make": "Cisco",
+      "model": "ISR 4451",
+      "rack": "Rack-C1",
+      "unitposition": 3,
+      "status": "maintenance",
+      "tags": [
+        "network",
+        "critical"
       ]
     }
   ]
