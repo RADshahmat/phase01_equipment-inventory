@@ -1,26 +1,30 @@
-import { Request, Response } from "express";
+import type {Request,Response} from "express";
+import { fetchEquipment} from "../services/equipmentService";
 
-import { fetchEquipment } from "../services/equipmentService.js";
+export async function getEquipment(req: Request, res: Response) {
 
-export async function getEquipment(
-    req: Request,
-    res: Response
-) {
-    try {
+        const types =
+            typeof req.query.types === "string"
+                ? req.query.types.split(",")
+                : [];
 
-        const data = await fetchEquipment();
+        const makes =
+            typeof req.query.makes === "string"
+                ? req.query.makes.split(",")
+                : [];
 
-        res.status(200).json({
+        const search =
+            typeof req.query.search === "string"
+                ? req.query.search
+                : "";
+
+        const equipment = await fetchEquipment({types,  makes, search });
+
+        return res.status(200).json({
             success: true,
-            count: data.length,
-            data,
+            count: equipment.length,
+            data: equipment,
         });
 
-    } catch (error) {
-
-        res.status(500).json({
-            success: false,
-            message: "Failed to fetch equipment",
-        });
-    }
+  
 }

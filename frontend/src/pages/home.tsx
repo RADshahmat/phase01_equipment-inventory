@@ -1,85 +1,97 @@
-import { useEffect, useMemo, useState } from "react";
-import { fetchEquipment } from "../api/equipmentApi";
+import { useEffect, useState } from "react";
 import type { Equipment } from "../types/equipment";
 import EquipmentTable from "../components/EquipmentTable";
 import FilterBar from "../components/FilterBar";
 import SearchBar from "../components/SearchBar";
 import EquipmentDetail from "../components/EquipmentDetail";
 
+
+
 export default function Home() {
-    // state lifting from filterBar and searchBar
-    const [data, setData] = useState<Equipment[]>([]);
-    const [type, setType] = useState("");
-    const [make, setMake] = useState("");
-    const [search, setSearch] = useState("");
-    const [selected, setSelected] = useState<Equipment | null>(null);
-    const [darkMode, setDarkMode] = useState(false);
+  // filter states
+  const [types, setTypes] = useState<string[]>([]);
+  const [makes, setMakes] = useState<string[]>([]);
+  const [search, setSearch] = useState("");
+  // selected item
+  const [selected, setSelected] = useState<Equipment | null>(null);
 
-    useEffect(() => {
-        fetchEquipment().then((res) => {
-            setData(res);
-        });
-    }, []);
+  // dark mode
+  const [darkMode, setDarkMode] = useState(false);
 
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.add("dark");
-        } else {
-            document.documentElement.classList.remove("dark");
-        }
-    }, [darkMode]);
+  // dark mode effect
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
 
-    const filtered = useMemo(() => {
-        return data.filter((e) => {
-            if (type && e.type !== type) return false;
-            if (make && e.make !== make) return false;
-
-            const tags = e.tags ?? [];
-            if (search) {
-                const match = tags.some((tag) =>
-                    tag.toLowerCase().includes(search.toLowerCase())
-                );
-                if (!match) return false;
-            }
-
-            return true;         
-        });
-    }, [data, type, make, search]);
-
-    return (
-        <div className="w-full ">
-            <div className=" mx-auto bg-teal-500 dark:bg-gray-900 min-h-screen p-6">
-
-                {/* Header */}
-                <h1 className=" text-2xl font-bold mb-6">
-                   Static Equipment Inventory
-                </h1>
-                <button
-                    onClick={() => setDarkMode(!darkMode)}
-                    className="mb-3 px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white hover:scale-105 transition"
-                >
-                    {darkMode ? "☀ Light" : "🌙 Dark"}
-                </button>
-                {/* Filters Card */}
-                <div className="flex items-center gap-4 bg-white  rounded-2xl shadow-sm mb-4 pl-5">
-                    <SearchBar value={search} onChange={setSearch} />
-                    <FilterBar
-                        type={type}
-                        make={make}
-                        onTypeChange={setType}
-                        onMakeChange={setMake}
-                    />
-
-                </div>
-
-                {/* Table */}
-                <div className="bg-white p-4 rounded-2xl shadow-sm">
-                    <EquipmentTable data={filtered} onRowClick={setSelected} />
-                </div>
-
-                {/* Detail */}
-                <EquipmentDetail item={selected} onClose={() => setSelected(null)} />
-            </div>
-        </div>
+  // toggle type
+  function toggleType(value: string) {
+    setTypes((prev) =>
+      prev.includes(value) ? prev.filter((t) => t !== value) : [...prev, value],
     );
+  }
+
+  // toggle make
+  function toggleMake(value: string) {
+    setMakes((prev) =>
+      prev.includes(value) ? prev.filter((m) => m !== value) : [...prev, value],
+    );
+  }
+
+
+  return (
+    <div className="min-h-screen bg-slate-100 dark:bg-gray-900 transition-colors ">
+      <div className="max-w-7xl mx-auto p-6">
+        {/* HEADER */}
+        <div className=" flex flex-col md:flex-row md:items-center  md:justify-between gap-4 mb-6 ">
+          <div>
+            <h1 className=" text-3xl font-bold text-slate-800 dark:text-white ">
+              Static Equipment Inventory
+            </h1>
+
+            <p className=" text-slate-500 dark:text-slate-400 mt-1 ">
+              Infrastructure asset management dashboard
+            </p>
+          </div>
+
+          {/* DARK MODE BUTTON */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className=" px-4 py-2 rounded-xl  bg-white dark:bg-gray-800  border border-slate-200 dark:border-gray-700 shadow-sm hover:scale-105  transition  text-sm font-medium   dark:text-white " >
+            {darkMode ? "☀ Light" : "🌙 Dark"}
+          </button>
+        </div>
+
+        {/* FILTER BAR */}
+        <div className=" flex items-center gap-4 bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 rounded-2xl shadow-sm p-4 mb-5 " >
+          <FilterBar
+            selectedTypes={types}
+            selectedMakes={makes}
+            onTypeChange={toggleType}
+            onMakeChange={toggleMake}
+          />
+
+          <div className="flex-1">
+            <SearchBar value={search} onChange={setSearch} />
+          </div>
+        </div>
+
+        {/* TABLE */}
+        <div className="bg-white dark:bg-gray-800  border border-slate-200 dark:border-gray-700 rounded-2x shadow-sm p-4 ">
+                  <EquipmentTable
+                      types={types}
+                      makes={makes}
+                      search={search}
+                      onRowClick={setSelected}
+                  />
+        </div>
+
+        {/* DETAIL MODAL */}
+        <EquipmentDetail item={selected} onClose={() => setSelected(null)} />
+      </div>
+    </div>
+  );
 }

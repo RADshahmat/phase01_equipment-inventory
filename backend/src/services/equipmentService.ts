@@ -1,8 +1,9 @@
 import { getAllEquipment } from "../repositories/equipmentRepository";
+import type { Filters } from "../types/equipmentType";
 
-export async function fetchEquipment() {
+export async function fetchEquipment( filters: Filters) {
 
-    const equipment = await getAllEquipment();
+    // future business logic goes here
 
-    return equipment;
+    return await getAllEquipment(filters);
 }

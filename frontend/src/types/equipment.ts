@@ -15,3 +15,9 @@ export type ApiResponse<T> = {
     count: number;
     data: T[];
 };
+
+export type Filters = {
+    types?: string[];
+    makes?: string[];
+    search?: string;
+};
