@@ -1,48 +1,188 @@
+import { useState } from "react";
+
 type Props = {
-    type: string;
-    make: string;
-    onTypeChange: (v: string) => void;
-    onMakeChange: (v: string) => void;
+    selectedTypes: string[];
+    selectedMakes: string[];
+
+    onTypeChange: (value: string) => void;
+    onMakeChange: (value: string) => void;
 };
 
+const types = [
+    "server",
+    "switch",
+    "router",
+    "ups",
+];
+
+const makes = [
+    "Dell",
+    "Cisco",
+    "HP",
+    "APC",
+];
+
 export default function FilterBar({
-    type,
-    make,
+    selectedTypes,
+    selectedMakes,
     onTypeChange,
     onMakeChange,
 }: Props) {
+
+    const [open, setOpen] = useState(false);
+
+    const [typeOpen, setTypeOpen] =
+        useState(true);
+
+    const [makeOpen, setMakeOpen] =
+        useState(true);
+
     return (
-        <div className=" bg-white w-full rounded-xl p-3 flex flex-col md:flex-row gap-3 md:items-center">
+        <div className="relative">
 
-            {/* Type */}
-            <select
-                value={type}
-                onChange={(e) => onTypeChange(e.target.value)}
-                className=" w-full px-3 py-2 border border-gray-200 rounded-lg text-sm 
-                           focus:outline-none focus:ring-2 focus:ring-blue-200 
-                           bg-white hover:border-gray-300 transition w-full md:w-1/4"
+            {/* Filter Button */}
+            <button
+                onClick={() => setOpen(!open)}
+                className="
+                    h-12 px-4
+                    rounded-xl
+                    border border-slate-300
+                    bg-white
+                    hover:bg-slate-50
+                    shadow-sm
+                    flex items-center gap-2
+                    transition
+                "
             >
-                <option value="">All Types</option>
-                <option value="server">Server</option>
-                <option value="switch">Switch</option>
-                <option value="router">Router</option>
-                <option value="ups">UPS</option>
-            </select>
+                <span className="text-lg">
+                    ⚙️
+                </span>
 
-            {/* Make */}
-            <select
-                value={make}
-                onChange={(e) => onMakeChange(e.target.value)}
-                className=" w-full px-3 py-2 border border-gray-200 rounded-lg text-sm 
-                           focus:outline-none focus:ring-2 focus:ring-blue-200 
-                           bg-white hover:border-gray-300 transition w-full md:w-1/4"
-            >
-                <option value="">All Makes</option>
-                <option value="Dell">Dell</option>
-                <option value="Cisco">Cisco</option>
-                <option value="HP">HP</option>
-                <option value="APC">APC</option>
-            </select>
+                <span className="font-medium">
+                    Filters
+                </span>
+            </button>
+
+            {/* Panel */}
+            {open && (
+                <div
+                    className="
+                        absolute left-0 top-14
+                        w-72
+                        bg-white
+                        border border-slate-200
+                        rounded-2xl
+                        shadow-xl
+                        p-4
+                        z-50
+                    "
+                >
+
+                    {/* TYPE SECTION */}
+                    <div className="mb-4">
+
+                        <button
+                            onClick={() =>
+                                setTypeOpen(!typeOpen)
+                            }
+                            className="
+                                w-full
+                                flex items-center
+                                justify-between
+                                font-semibold
+                                text-slate-700
+                                mb-2
+                            "
+                        >
+                            <span>Type</span>
+
+                            <span>
+                                {typeOpen ? "−" : "+"}
+                            </span>
+                        </button>
+
+                        {typeOpen && (
+                            <div className="space-y-2">
+
+                                {types.map((type) => (
+
+                                    <label
+                                        key={type}
+                                        className="
+                                            flex items-center gap-2
+                                            text-sm text-slate-600
+                                            cursor-pointer
+                                        "
+                                    >
+
+                                        <input
+                                            type="checkbox"
+                                            checked={selectedTypes.includes(type)}
+                                            onChange={() =>
+                                                onTypeChange(type)
+                                            }
+                                        />
+
+                                        {type}
+                                    </label>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* MAKE SECTION */}
+                    <div>
+
+                        <button
+                            onClick={() =>
+                                setMakeOpen(!makeOpen)
+                            }
+                            className="
+                                w-full
+                                flex items-center
+                                justify-between
+                                font-semibold
+                                text-slate-700
+                                mb-2
+                            "
+                        >
+                            <span>Make</span>
+
+                            <span>
+                                {makeOpen ? "−" : "+"}
+                            </span>
+                        </button>
+
+                        {makeOpen && (
+                            <div className="space-y-2">
+
+                                {makes.map((make) => (
+
+                                    <label
+                                        key={make}
+                                        className="
+                                            flex items-center gap-2
+                                            text-sm text-slate-600
+                                            cursor-pointer
+                                        "
+                                    >
+
+                                        <input
+                                            type="checkbox"
+                                            checked={selectedMakes.includes(make)}
+                                            onChange={() =>
+                                                onMakeChange(make)
+                                            }
+                                        />
+
+                                        {make}
+                                    </label>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
