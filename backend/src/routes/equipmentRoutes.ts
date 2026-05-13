@@ -1,8 +1,9 @@
 import { Router } from "express";
+
 import { getEquipment } from "../controllers/equipmentController";
 
 const router = Router();
 
-router.get("/equipment", getEquipment);
+router.get("/", getEquipment);
 
 export default router;

@@ -1,22 +1,23 @@
 import { Request, Response } from "express";
-import { pool } from "../db/dbconnection";
+
+import { fetchEquipment } from "../services/equipmentService.js";
 
 export async function getEquipment(
     req: Request,
     res: Response
 ) {
     try {
-        const result = await pool.query(
-            "SELECT * FROM equipment ORDER BY id ASC"
-        );
 
-        res.json({
+        const data = await fetchEquipment();
+
+        res.status(200).json({
             success: true,
-            count: result.rows.length,
-            data: result.rows,
+            count: data.length,
+            data,
         });
 
     } catch (error) {
+
         res.status(500).json({
             success: false,
             message: "Failed to fetch equipment",
