@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import router from "./routes";
+import { errorMiddleware } from "./middleware/errorMiddleware";
 
 dotenv.config();
 
@@ -16,6 +17,8 @@ app.use("/api", router);
 app.get("/health", (_req: express.Request, res: express.Response) => {
   res.send("Equipment Inventory API Running");
 });
+
+app.use(errorMiddleware);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on port ${process.env.PORT || 5000}`);

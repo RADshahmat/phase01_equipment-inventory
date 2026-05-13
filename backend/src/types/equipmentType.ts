@@ -13,3 +13,9 @@ export type Equipment = {
     status: string;
     tags: string[];
 };
+
+export type Filters = {
+    types: string[];
+    makes: string[];
+    search: string;
+};
