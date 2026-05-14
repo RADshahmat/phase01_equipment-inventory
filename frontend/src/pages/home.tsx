@@ -4,6 +4,7 @@ import EquipmentTable from "../components/EquipmentTable";
 import FilterBar from "../components/FilterBar";
 import SearchBar from "../components/SearchBar";
 import EquipmentDetail from "../components/EquipmentDetail";
+import useDebounce from "../hooks/useDebounce";
 
 
 
@@ -12,6 +13,7 @@ export default function Home() {
   const [types, setTypes] = useState<string[]>([]);
   const [makes, setMakes] = useState<string[]>([]);
   const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 300);
   // selected item
   const [selected, setSelected] = useState<Equipment | null>(null);
 
@@ -81,12 +83,12 @@ export default function Home() {
 
         {/* TABLE */}
         <div className="bg-white dark:bg-gray-800  border border-slate-200 dark:border-gray-700 rounded-2x shadow-sm p-4 ">
-                  <EquipmentTable
-                      types={types}
-                      makes={makes}
-                      search={search}
-                      onRowClick={setSelected}
-                  />
+          <EquipmentTable
+            types={types}
+            makes={makes}
+            search={debouncedSearch}
+            onRowClick={setSelected}
+          />
         </div>
 
         {/* DETAIL MODAL */}

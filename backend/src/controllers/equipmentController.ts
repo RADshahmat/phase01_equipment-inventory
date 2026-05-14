@@ -1,5 +1,5 @@
 import type {Request,Response} from "express";
-import { fetchEquipment} from "../services/equipmentService";
+import { fetchEquipment, removeEquipment } from "../services/equipmentService";
 
 export async function getEquipment(req: Request, res: Response) {
 
@@ -27,4 +27,21 @@ export async function getEquipment(req: Request, res: Response) {
         });
 
   
+}
+
+export async function deleteEquipment(req: Request, res: Response) { 
+    const id = Number(req.params.id);
+
+    if (isNaN(id)){
+        return res.status(400).json({
+            success: false,
+            message: "Invalid equipment ID",
+        });
+    }
+    await removeEquipment(id);
+
+    return res.status(200).json({
+        success: true,
+        message: "Equipment deleted successfully",
+    });
 }
