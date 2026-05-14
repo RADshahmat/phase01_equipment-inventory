@@ -76,3 +76,19 @@ export async function deleteEquipmentById(id: number) {
 
     return result.rowCount;
 }
+
+export async function checkEquipmentExists(
+    name: string
+) {
+    const result = await pool.query(
+        `
+        SELECT 1
+        FROM equipment
+        WHERE name = $1
+        LIMIT 1
+        `,
+        [name]
+    );
+
+    return result.rowCount !== 0;
+}
