@@ -1,24 +1,11 @@
 import type {Request,Response} from "express";
 import { fetchEquipment, removeEquipment } from "../services/equipmentService";
+import { equipmentQuerySchema } from "../routes/equipment.schema";
 
 export async function getEquipment(req: Request, res: Response) {
 
-        const types =
-            typeof req.query.types === "string"
-                ? req.query.types.split(",")
-                : [];
-
-        const makes =
-            typeof req.query.makes === "string"
-                ? req.query.makes.split(",")
-                : [];
-
-        const search =
-            typeof req.query.search === "string"
-                ? req.query.search
-                : "";
-
-        const equipment = await fetchEquipment({types,  makes, search });
+    const parsed = equipmentQuerySchema.parse(req.query);
+    const equipment = await fetchEquipment(parsed);
 
         return res.status(200).json({
             success: true,
@@ -43,5 +30,15 @@ export async function deleteEquipment(req: Request, res: Response) {
     return res.status(200).json({
         success: true,
         message: "Equipment deleted successfully",
+    });
+}
+
+export async function createEquipment(
+    req: Request,
+    res: Response
+) {
+    return res.status(201).json({
+        success: true,
+        data: req.body,
     });
 }

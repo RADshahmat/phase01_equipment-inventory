@@ -1,68 +1,74 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { describe, expect, test, vi } from "vitest";
-import EquipmentTable from "./EquipmentTable";
+import EquipmentDetail from "./EquipmentDetail";
 import type { Equipment } from "../types/equipment";
 
-const mockData: Equipment[] = [
-    {
-        id: 1,
-        name: "Dell PowerEdge R740",
-        type: "server",
-        make: "Dell",
-        model: "R740",
-        rack: "Rack-A1",
-        unitposition: 12,
-        status: "active",
-        tags: ["production", "core"],
-    },
-];
+const mockItem: Equipment = {
+    id: 1,
+    name: "Dell PowerEdge R740",
+    type: "server",
+    make: "Dell",
+    model: "R740",
+    rack: "Rack-A1",
+    unitposition: 12,
+    status: "active",
+    tags: ["production", "core"],
+};
 
-describe("EquipmentTable", () => {
+describe("EquipmentDetail", () => {
 
-    test("renders equipment data", () => {
+    test("renders equipment details correctly", () => {
         render(
-            <EquipmentTable
-                data={mockData}
-                onRowClick={() => { }}
+            <EquipmentDetail
+                item={mockItem}
+                onClose={() => { }}
             />
         );
 
-        expect(
-            screen.getByText("Dell PowerEdge R740")
-        ).toBeInTheDocument();
-
-        expect(
-            screen.getByText("server")
-        ).toBeInTheDocument();
+        expect(screen.getByText("Dell PowerEdge R740")).toBeInTheDocument();
+        expect(screen.getByText("server")).toBeInTheDocument();
+        expect(screen.getByText("Dell")).toBeInTheDocument();
+        expect(screen.getByText("R740")).toBeInTheDocument();
+        expect(screen.getByText("Rack-A1")).toBeInTheDocument();
+        expect(screen.getByText("active")).toBeInTheDocument();
     });
 
-    test("shows empty state", () => {
+    test("renders tags correctly", () => {
         render(
-            <EquipmentTable
-                data={[]}
-                onRowClick={() => { }}
+            <EquipmentDetail
+                item={mockItem}
+                onClose={() => { }}
             />
         );
 
-        expect(
-            screen.getByText(/no results found/i)
-        ).toBeInTheDocument();
+        expect(screen.getByText("#production")).toBeInTheDocument();
+        expect(screen.getByText("#core")).toBeInTheDocument();
     });
 
-    test("calls row click handler", () => {
-        const handleClick = vi.fn();
+    test("calls onClose when close button clicked", () => {
+        const handleClose = vi.fn();
 
         render(
-            <EquipmentTable
-                data={mockData}
-                onRowClick={handleClick}
+            <EquipmentDetail
+                item={mockItem}
+                onClose={handleClose}
             />
         );
 
-        fireEvent.click(
-            screen.getByText("Dell PowerEdge R740")
+        fireEvent.click(screen.getByText("✕"));
+
+        expect(handleClose).toHaveBeenCalledTimes(1);
+    });
+
+    test("returns null when item is null", () => {
+        const { container } = render(
+            <EquipmentDetail
+                item={null}
+                onClose={() => { }}
+            />
         );
 
-        expect(handleClick).toHaveBeenCalledTimes(1);
+        expect(container).toBeEmptyDOMElement();
     });
+
 });
