@@ -214,16 +214,19 @@ npm test
 Expected output:
 ```bash
 
- ✓ src/components/EquipmentTable.test.tsx (3 tests) 62ms
-   ✓ EquipmentTable (3)
-     ✓ renders equipment data 46ms
-     ✓ shows empty state 4ms
-     ✓ calls row click handler 8ms
+ DEV  v4.1.5 E:/SSCL Training/phase01_static-equipment-inventory/frontend
+
+ ✓ src/components/EquipmentDetail.test.tsx (4 tests) 70ms
+   ✓ EquipmentDetail (4)
+     ✓ renders equipment details correctly 48ms
+     ✓ renders tags correctly 7ms
+     ✓ calls onClose when close button clicked 9ms
+     ✓ returns null when item is null 2ms
 
  Test Files  1 passed (1)
-      Tests  3 passed (3)
-   Start at  11:55:05
-   Duration  1.65s (transform 61ms, setup 124ms, import 142ms, tests 62ms, environment 1.09s)
+      Tests  4 passed (4)
+   Start at  19:19:01
+   Duration  5.67s (transform 94ms, setup 471ms, import 591ms, tests 70ms, environment 4.19s)
 ```
 ## Running Lint and Result:
 ```bash
