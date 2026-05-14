@@ -1,11 +1,7 @@
 
 import { pool } from "../db/dbconnection";
 
-type Filters = {
-    types: string[];
-    makes: string[];
-    search: string;
-};
+import type { Filters } from "../types/equipmentType"; 
 
 export async function getAllEquipment({
     types,
@@ -69,4 +65,14 @@ export async function getAllEquipment({
         await pool.query(query, values);
 
     return result.rows;
+}
+
+export async function deleteEquipmentById(id: number) {
+
+    const result = await pool.query(
+        `DELETE FROM equipment WHERE id = $1`,
+        [id]
+    );
+
+    return result.rowCount;
 }

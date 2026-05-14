@@ -1,5 +1,5 @@
 import type { Equipment } from "../types/equipment";
-import { useEquipment } from "../hooks/useEquipment";
+import { useEquipment, useDeleteEquipment } from "../hooks/useEquipment";
 
 type Props = {
   types: string[];
@@ -22,9 +22,10 @@ function getStatusStyle(status: string) {
   }
 }
 
-export default function EquipmentTable({ types, makes, search, onRowClick }: Props) {
-  // fetch data
-  const { data = [], isLoading, isError } = useEquipment({ types, makes, search });
+export default function EquipmentTable({types, makes,search,onRowClick}: Props) {
+
+  const {data = [], isLoading, isError} = useEquipment({ types, makes, search });
+  const deleteMutation = useDeleteEquipment();
 
   // loading state
   if (isLoading) {
@@ -57,23 +58,8 @@ export default function EquipmentTable({ types, makes, search, onRowClick }: Pro
 
   return (
     <div className="mt-6 overflow-x-auto">
-      <div
-        className="
-                bg-white
-                dark:bg-gray-800
-                shadow-md
-                rounded-xl
-                border border-gray-100
-                dark:border-gray-700
-            "
-      >
-        <table
-          className="
-                    w-full
-                    text-sm
-                    text-left
-                "
-        >
+      <div className="bg-white dark:bg-gray-800 shadow-md rounded-xl border border-gray-100  dark:border-gray-700 ">
+        <table className="w-full text-sm text-left" >
           <thead
             className="
                         bg-gray-50
@@ -90,6 +76,7 @@ export default function EquipmentTable({ types, makes, search, onRowClick }: Pro
               <th className="px-6 py-4">Make</th>
               <th className="px-6 py-4">Rack</th>
               <th className="px-6 py-4">Status</th>
+              <th className="px-6 py-4">Action</th>
             </tr>
           </thead>
 
@@ -103,21 +90,9 @@ export default function EquipmentTable({ types, makes, search, onRowClick }: Pro
               <tr
                 key={item.id}
                 onClick={() => onRowClick(item)}
-                className="
-                                    hover:bg-gray-50
-                                    dark:hover:bg-gray-700
-                                    cursor-pointer
-                                    transition
-                                "
+                className=" hover:bg-gray-50 dark:hover:bg-gray-700  cursor-pointer transition"
               >
-                <td
-                  className="
-                                    px-6 py-4
-                                    font-medium
-                                    text-gray-800
-                                    dark:text-white
-                                "
-                >
+                <td className=" px-6 py-4 font-medium text-gray-800 dark:text-white">
                   {item.name}
                 </td>
 
@@ -164,6 +139,20 @@ export default function EquipmentTable({ types, makes, search, onRowClick }: Pro
                   >
                     {item.status}
                   </span>
+                </td>
+
+                <td className="px-6 py-4">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      const confirmed = window.confirm( `Are you sure you want to delete "${item.name}"?` );
+                      if (!confirmed) return;
+                      deleteMutation.mutate(item.id);
+                    }}
+                    className=" px-3 py-1 rounded-lg bg-red-50 text-red-600 hover:bg-red-200transitiontext-smfont-medium"
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
