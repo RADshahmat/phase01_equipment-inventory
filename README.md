@@ -71,6 +71,19 @@ git clone https://github.com/RADshahmat/phase01_static-equipment-inventory.git
 cd phase01_static-equipment-inventory
 ```
 
+### 2️⃣ Run with Docker (production Build)
+
+After cloning the repo, Create a `.env` file in the `root` directory. 
+> **Tip:** Copy `.env.docker.example` and update with your credentials
+
+Then enter into the directory terminal and run: 
+```bash
+docker  compose up --build
+```
+Frontend on http://localhost:5173/ and Backend on http://localhost:5000/health
+
+### For Local run without docker follow below steps:
+
 ### 2️⃣ Setup PostgreSQL Database
 
 Make sure PostgreSQL is running, then create the database using pgAdmin or cmd:
