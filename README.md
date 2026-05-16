@@ -73,13 +73,16 @@ cd phase01_static-equipment-inventory
 
 ### 2️⃣ Run with Docker (production Build)
 
-After cloning the repo, Create a `.env` file in the `root` directory. 
+After cloning the repo, Create a `.env` file in the `root` directory.
+
 > **Tip:** Copy `.env.docker.example` and update with your credentials
 
-Then enter into the directory terminal and run: 
+Then enter into the directory terminal and run:
+
 ```bash
 docker  compose up --build
 ```
+
 Frontend on http://localhost:5173/ and Backend on http://localhost:5000/health
 
 ### For Local run without docker follow below steps:
@@ -204,19 +207,24 @@ Click any table row to view comprehensive information:
 
 ---
 
-## 📈 Self-Evaluation (Learning Rubric)
+## 📈 Self-Evaluation (Static-Equipment-Inventory)
 
-| Dimension                | Score | Notes                                                                  |
-| ------------------------ | ----- | ---------------------------------------------------------------------- |
-| **D1: Functionality**    | 4     | All core features working + stretch goals (tag search, empty states)   |
-| **D2: Code Quality**     | 4     | TypeScript throughout, clean component separation, no `any` types      |
-| **D3: Data Safety**      | 4     | Parameterized queries, environment variables, no hardcoded credentials |
-| **D4: Setup Experience** | 4     | Clear documentation, works on fresh machine, < 5 min setup             |
-| **D5: Testing**          | 4     | One component test with React Testing Library                          |
+| Dimension                | Score | Evidence                                                                                                                                                                |
+| ------------------------ | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **D1: Functionality**    | 4     | [tag search,](./frontend/src/components/SearchBar.tsx) [Empty states](./frontend/src/components/EquipmentTable.tsx)                                                     |
+| **D2: Code Quality**     | 4     | [TypeScript throughout,](./backend/src/types/) [Clean component separation,](./frontend/src/components/) [no `any` types](./frontend/src/components/EquipmentTable.tsx) |
+| **D3: Data Safety**      | 4     | [Parameterized queries,](./backend/src/repositories/equipmentRepository.ts) [environment variables, no hardcoded credentials](./backend/src/db/dbconnection.ts)         |
+| **D4: Setup Experience** | 4     | [Clear documentation,](#setup-instructions) [Screenshot of running app](#-static-equipment-inventory)                                                                   |
+| **D5: Testing**          | 4     | [EquipmentTable component test with Vitest](./frontend/src/components/EquipmentTable.test.tsx)                                                                          |
 
 **Overall Score:** 20/20 — **Proficient** ✅
 
 **Status:** Ready for submission and production use
+
+Reviewed by: self
+Date: 2026-05-3
+
+---
 
 ## 📊 Sample Data
 
