@@ -8,15 +8,16 @@
     "build": "tsc -b && vite build",
     "lint": "eslint src --ext .ts,.tsx",
     "preview": "vite preview",
-      "test": "vitest",
-  "test:ui": "vitest --ui",
-  "test:run": "vitest run"
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
     "@tanstack/react-query-devtools": "^5.100.10",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-router-dom": "^7.15.1",
     "tailwindcss": "^4.2.4"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import type { Equipment } from "../types/equipment";
 import EquipmentTable from "../components/EquipmentTable";
 import FilterBar from "../components/FilterBar";
@@ -17,17 +17,6 @@ export default function Home() {
   // selected item
   const [selected, setSelected] = useState<Equipment | null>(null);
 
-  // dark mode
-  const [darkMode, setDarkMode] = useState(false);
-
-  // dark mode effect
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
 
   // toggle type
   function toggleType(value: string) {
@@ -55,12 +44,7 @@ export default function Home() {
             </h1>
           </div>
 
-          {/* DARK MODE BUTTON */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className=" px-4 py-2 rounded-xl  bg-white dark:bg-gray-800  border border-slate-200 dark:border-gray-700 shadow-sm hover:scale-105  transition  text-sm font-medium   dark:text-white " >
-            {darkMode ? "☀ Light" : "🌙 Dark"}
-          </button>
+
         </div>
 
         {/* FILTER BAR */}
